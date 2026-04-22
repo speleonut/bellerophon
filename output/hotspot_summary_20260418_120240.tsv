@@ -1,0 +1,477 @@
+fusion_id	tissue	gene1_tpm	gene2_tpm	log2_ratio	hotspot_status	hotspot_reason
+ENSG00000255201::RALYL_i_i_30EFE4	Adipose_Subcutaneous	12.07	0.02	6.708	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Adipose_Visceral_Omentum	12.23	0	6.946	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Adrenal_Gland	1.17	10.24	-3.027	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Artery_Aorta	12.45	0.01	6.775	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Artery_Coronary	12.39	0.02	6.683	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Artery_Tibial	9.31	0.02	6.262	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Bladder	8.74	0	6.466	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Amygdala	1.06	10.98	-3.253	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Anterior_cingulate_cortex_BA24	1.18	22.37	-4.138	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Caudate_basal_ganglia	1.18	13.27	-3.388	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Cerebellar_Hemisphere	24.15	61.56	-1.346	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Cerebellum	29.76	39.43	-0.405	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Cortex	1.54	16.7	-3.361	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Frontal_Cortex_BA9	1.17	30.29	-4.578	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Hippocampus	1	9.64	-3.142	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Hypothalamus	0.94	24.48	-4.569	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Nucleus_accumbens_basal_ganglia	0.99	20.36	-4.234	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Putamen_basal_ganglia	0.65	9.14	-3.617	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Spinal_cord_cervical_c-1	1.18	3.05	-1.3	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Brain_Substantia_nigra	0.88	9.22	-3.255	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Breast_Mammary_Tissue	16.53	0.02	7.124	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Cells_Cultured_fibroblasts	8.31	0	6.394	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Cells_EBV-transformed_lymphocytes	0.76	0	3.098	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Cervix_Ectocervix	11.96	0	6.913	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Cervix_Endocervix	10.54	0.01	6.599	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Colon_Sigmoid	12.03	0.45	4.462	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Colon_Transverse	5.78	0.17	4.429	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Colon_Transverse_Mixed_Cell	1.95	0.07	3.625	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Colon_Transverse_Mucosa	0.69	0	2.979	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Colon_Transverse_Muscularis	9.12	0.32	4.455	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Esophagus_Gastroesophageal_Junction	10.38	0.07	5.917	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Esophagus_Mucosa	3.32	0	5.095	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Esophagus_Muscularis	9.82	0.04	6.127	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Fallopian_Tube	16.47	0.78	4.228	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Heart_Atrial_Appendage	6.07	1.1	2.358	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Heart_Left_Ventricle	2.09	0.37	2.238	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Kidney_Cortex	2.96	1.77	0.714	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Kidney_Medulla	4.88	2.58	0.892	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Liver	0.49	0.05	1.961	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Liver_Hepatocyte	0.17	0.02	1.217	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Liver_Mixed_Cell	0.26	0.05	1.231	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Liver_Portal_Tract	3.21	4.11	-0.346	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Lung	10.8	0	6.768	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Minor_Salivary_Gland	6.18	0.42	3.599	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Muscle_Skeletal	1.42	0.02	3.621	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Nerve_Tibial	17.51	0.25	5.644	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Ovary	19.03	0.03	7.248	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Pancreas	11.01	0.3	4.8	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Pancreas_Acini	11.41	0.29	4.894	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Pancreas_Islets	9.2	8.93	0.043	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Pancreas_Mixed_Cell	8.56	0.38	4.159	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Pituitary	13.79	6.44	1.087	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Prostate	14.11	0.07	6.404	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Skin_Not_Sun_Exposed_Suprapubic	5.1	0	5.701	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Skin_Sun_Exposed_Lower_leg	4.63	0.02	5.314	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Small_Intestine_Terminal_Ileum	5.68	0.24	4.092	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	5.49	0.14	4.515	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Mixed_Cell	4.15	0.2	3.83	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Spleen	2.02	1.81	0.155	Not hotspot	NA
+ENSG00000255201::RALYL_i_i_30EFE4	Stomach	2.33	0.03	4.25	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Stomach_Mixed_Cell	2.37	0.01	4.456	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Stomach_Mucosa	0.3	0	2.014	Hotspot	Large expression difference (log2 ratio > 1)
+ENSG00000255201::RALYL_i_i_30EFE4	Stomach_Muscularis	7.56	0.13	5.047	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Testis	4.61	0.32	3.488	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Thyroid	8.16	0.02	6.148	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Uterus	12.82	0.04	6.491	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Vagina	12.71	0.03	6.675	Hotspot	Upstream expressed; downstream silent; large ratio
+ENSG00000255201::RALYL_i_i_30EFE4	Whole_Blood	0.52	0	2.641	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Adipose_Subcutaneous	91.12	0.02	9.615	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Adipose_Visceral_Omentum	84.18	0	9.719	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Adrenal_Gland	8.11	10.24	-0.332	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Artery_Aorta	131.33	0.01	10.164	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Artery_Coronary	105.58	0.02	9.764	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Artery_Tibial	119.98	0.02	9.937	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Bladder	80.97	0	9.663	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Brain_Amygdala	12.6	10.98	0.197	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Anterior_cingulate_cortex_BA24	14.27	22.37	-0.645	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Caudate_basal_ganglia	11.56	13.27	-0.197	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Cerebellar_Hemisphere	106.8	61.56	0.794	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Cerebellum	108.9	39.43	1.463	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Brain_Cortex	14.79	16.7	-0.175	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Frontal_Cortex_BA9	14.31	30.29	-1.077	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Hippocampus	11.92	9.64	0.304	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Hypothalamus	18.8	24.48	-0.379	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Nucleus_accumbens_basal_ganglia	11.61	20.36	-0.804	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Putamen_basal_ganglia	9.27	9.14	0.02	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Brain_Spinal_cord_cervical_c-1	23.84	3.05	2.925	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Brain_Substantia_nigra	14.07	9.22	0.605	Not hotspot	NA
+FGFR1::RALYL_i_i_30EFE4	Breast_Mammary_Tissue	85.5	0.02	9.488	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Cells_Cultured_fibroblasts	80.47	0	9.654	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Cells_EBV-transformed_lymphocytes	4.86	0	5.632	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Cervix_Ectocervix	83.92	0	9.715	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Cervix_Endocervix	89.25	0.01	9.669	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Colon_Sigmoid	98.59	0.45	7.487	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Colon_Transverse	43.09	0.17	7.306	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Colon_Transverse_Mixed_Cell	18.75	0.07	6.825	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Colon_Transverse_Mucosa	4.04	0	5.371	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Colon_Transverse_Muscularis	83.8	0.32	7.641	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Esophagus_Gastroesophageal_Junction	97.49	0.07	9.136	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Esophagus_Mucosa	15.34	0	7.271	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Esophagus_Muscularis	95.22	0.04	9.392	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Fallopian_Tube	131.15	0.78	7.214	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Heart_Atrial_Appendage	43.76	1.1	5.188	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Heart_Left_Ventricle	24.34	0.37	5.715	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Kidney_Cortex	16.17	1.77	3.122	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Kidney_Medulla	28.76	2.58	3.427	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Liver	2.44	0.05	4.069	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Liver_Hepatocyte	0.97	0.02	3.209	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Liver_Mixed_Cell	1.51	0.05	3.401	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Liver_Portal_Tract	26.81	4.11	2.677	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Lung	54.82	0	9.101	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Minor_Salivary_Gland	25.9	0.42	5.649	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Muscle_Skeletal	9.68	0.02	6.303	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Nerve_Tibial	101.45	0.25	8.172	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Ovary	127.79	0.03	9.989	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Pancreas	37.64	0.3	6.565	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Pancreas_Acini	35.09	0.29	6.506	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Pancreas_Islets	45.02	8.93	2.321	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Pancreas_Mixed_Cell	32.37	0.38	6.066	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Pituitary	62.94	6.44	3.269	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Prostate	60.61	0.07	8.499	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Skin_Not_Sun_Exposed_Suprapubic	25.46	0	7.998	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Skin_Sun_Exposed_Lower_leg	30.26	0.02	7.997	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Small_Intestine_Terminal_Ileum	28.55	0.24	6.403	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	23.93	0.14	6.619	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Mixed_Cell	19.95	0.2	6.068	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Spleen	9.76	1.81	2.371	Hotspot	Large expression difference (log2 ratio > 1)
+FGFR1::RALYL_i_i_30EFE4	Stomach	13.77	0.03	6.763	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Stomach_Mixed_Cell	19.15	0.01	7.417	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Stomach_Mucosa	2.91	0	4.911	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Stomach_Muscularis	71.2	0.13	8.265	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Testis	27.47	0.32	6.036	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Thyroid	41.36	0.02	8.476	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Uterus	101.65	0.04	9.468	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Vagina	66.74	0.03	9.059	Hotspot	Upstream expressed; downstream silent; large ratio
+FGFR1::RALYL_i_i_30EFE4	Whole_Blood	2.07	0	4.439	Hotspot	Upstream expressed; downstream silent; large ratio
+PHF6::HPRT1_i_i_912279	Adipose_Subcutaneous	2.89	22.26	-2.903	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Adipose_Visceral_Omentum	2.8	21.33	-2.886	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Adrenal_Gland	6.13	31.8	-2.355	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Artery_Aorta	3.18	30.85	-3.238	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Artery_Coronary	3.31	28.69	-3.08	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Artery_Tibial	3.04	29.37	-3.229	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Bladder	3.12	19.68	-2.621	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Amygdala	1.77	41.3	-4.467	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Anterior_cingulate_cortex_BA24	1.98	73.46	-5.142	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Caudate_basal_ganglia	1.96	33.69	-4.033	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Cerebellar_Hemisphere	6.65	78.18	-3.537	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Cerebellum	5.02	51.47	-3.333	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Cortex	1.89	61.56	-4.95	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Frontal_Cortex_BA9	2.62	119.68	-5.46	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Hippocampus	1.92	35.31	-4.132	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Hypothalamus	2.5	68.42	-4.719	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Nucleus_accumbens_basal_ganglia	2.13	52.88	-4.568	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Putamen_basal_ganglia	1.56	27.63	-4.06	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Spinal_cord_cervical_c-1	4.3	16.23	-1.891	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Brain_Substantia_nigra	2.23	27.74	-3.578	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Breast_Mammary_Tissue	2.92	23.15	-2.945	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Cells_Cultured_fibroblasts	7.21	68.77	-3.237	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Cells_EBV-transformed_lymphocytes	13.57	136.54	-3.321	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Cervix_Ectocervix	4.28	24.88	-2.513	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Cervix_Endocervix	4.22	25.44	-2.565	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Colon_Sigmoid	2.93	17.74	-2.557	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Colon_Transverse	2.74	19.67	-2.801	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Colon_Transverse_Mixed_Cell	2.22	17.01	-2.885	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Colon_Transverse_Mucosa	2.28	15.37	-2.702	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Colon_Transverse_Muscularis	1.52	16.25	-3.332	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Esophagus_Gastroesophageal_Junction	2.73	16.85	-2.583	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Esophagus_Mucosa	3.65	26.05	-2.804	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Esophagus_Muscularis	2.73	16.91	-2.589	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Fallopian_Tube	3.97	31.19	-2.941	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Heart_Atrial_Appendage	1.4	16.07	-3.432	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Heart_Left_Ventricle	0.91	12.17	-3.597	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Kidney_Cortex	1.77	25.27	-3.763	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Kidney_Medulla	2.99	27.22	-3.145	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Liver	1.17	12.16	-3.271	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Liver_Hepatocyte	1	10.34	-3.249	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Liver_Mixed_Cell	1.14	13.32	-3.435	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Liver_Portal_Tract	3.24	25.52	-2.938	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Lung	4.13	26.32	-2.642	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Minor_Salivary_Gland	4.07	19	-2.195	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Muscle_Skeletal	1.08	13.97	-3.58	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Nerve_Tibial	5.19	22.94	-2.122	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Ovary	14.16	32.43	-1.19	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Pancreas	1.51	15.99	-3.321	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Pancreas_Acini	1.19	13.43	-3.389	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Pancreas_Islets	2.16	33.62	-3.899	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Pancreas_Mixed_Cell	1.28	12.94	-3.245	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Pituitary	3.94	53.57	-3.73	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Prostate	3.55	22	-2.596	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Skin_Not_Sun_Exposed_Suprapubic	2.92	18.48	-2.622	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Skin_Sun_Exposed_Lower_leg	2.9	18.03	-2.595	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Small_Intestine_Terminal_Ileum	3.46	22.42	-2.661	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	6.71	22.75	-1.746	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Small_Intestine_Terminal_Ileum_Mixed_Cell	3.66	24.28	-2.695	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Spleen	4.57	26.62	-2.515	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Stomach	2.07	24.96	-3.527	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Stomach_Mixed_Cell	1.58	28.97	-4.11	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Stomach_Mucosa	1.23	26.93	-4.344	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Stomach_Muscularis	1.43	15.34	-3.335	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Testis	3.49	119.54	-5.06	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Thyroid	5.03	32.39	-2.662	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Uterus	4.88	25.11	-2.339	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Vagina	4.47	24.17	-2.41	Not hotspot	NA
+PHF6::HPRT1_i_i_912279	Whole_Blood	0.74	14.94	-4.165	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Adipose_Subcutaneous	0.02	12.07	-6.708	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Adipose_Visceral_Omentum	0	12.23	-6.946	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Adrenal_Gland	10.24	1.17	3.027	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Artery_Aorta	0.01	12.45	-6.775	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Artery_Coronary	0.02	12.39	-6.683	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Artery_Tibial	0.02	9.31	-6.262	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Bladder	0	8.74	-6.466	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Amygdala	10.98	1.06	3.253	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Anterior_cingulate_cortex_BA24	22.37	1.18	4.138	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Caudate_basal_ganglia	13.27	1.18	3.388	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Cerebellar_Hemisphere	61.56	24.15	1.346	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Cerebellum	39.43	29.76	0.405	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Cortex	16.7	1.54	3.361	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Frontal_Cortex_BA9	30.29	1.17	4.578	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Hippocampus	9.64	1	3.142	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Hypothalamus	24.48	0.94	4.569	Hotspot	Upstream expressed; downstream silent; large ratio
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Nucleus_accumbens_basal_ganglia	20.36	0.99	4.234	Hotspot	Upstream expressed; downstream silent; large ratio
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Putamen_basal_ganglia	9.14	0.65	3.617	Hotspot	Upstream expressed; downstream silent; large ratio
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Spinal_cord_cervical_c-1	3.05	1.18	1.3	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::ENSG00000255201_i_i_30EFE4	Brain_Substantia_nigra	9.22	0.88	3.255	Hotspot	Upstream expressed; downstream silent; large ratio
+RALYL::ENSG00000255201_i_i_30EFE4	Breast_Mammary_Tissue	0.02	16.53	-7.124	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Cells_Cultured_fibroblasts	0	8.31	-6.394	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Cells_EBV-transformed_lymphocytes	0	0.76	-3.098	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Cervix_Ectocervix	0	11.96	-6.913	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Cervix_Endocervix	0.01	10.54	-6.599	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Colon_Sigmoid	0.45	12.03	-4.462	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Colon_Transverse	0.17	5.78	-4.429	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Colon_Transverse_Mixed_Cell	0.07	1.95	-3.625	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Colon_Transverse_Mucosa	0	0.69	-2.979	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Colon_Transverse_Muscularis	0.32	9.12	-4.455	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Esophagus_Gastroesophageal_Junction	0.07	10.38	-5.917	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Esophagus_Mucosa	0	3.32	-5.095	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Esophagus_Muscularis	0.04	9.82	-6.127	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Fallopian_Tube	0.78	16.47	-4.228	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Heart_Atrial_Appendage	1.1	6.07	-2.358	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Heart_Left_Ventricle	0.37	2.09	-2.238	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Kidney_Cortex	1.77	2.96	-0.714	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Kidney_Medulla	2.58	4.88	-0.892	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Liver	0.05	0.49	-1.961	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Liver_Hepatocyte	0.02	0.17	-1.217	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Liver_Mixed_Cell	0.05	0.26	-1.231	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Liver_Portal_Tract	4.11	3.21	0.346	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Lung	0	10.8	-6.768	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Minor_Salivary_Gland	0.42	6.18	-3.599	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Muscle_Skeletal	0.02	1.42	-3.621	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Nerve_Tibial	0.25	17.51	-5.644	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Ovary	0.03	19.03	-7.248	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Pancreas	0.3	11.01	-4.8	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Pancreas_Acini	0.29	11.41	-4.894	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Pancreas_Islets	8.93	9.2	-0.043	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Pancreas_Mixed_Cell	0.38	8.56	-4.159	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Pituitary	6.44	13.79	-1.087	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Prostate	0.07	14.11	-6.404	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Skin_Not_Sun_Exposed_Suprapubic	0	5.1	-5.701	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Skin_Sun_Exposed_Lower_leg	0.02	4.63	-5.314	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Small_Intestine_Terminal_Ileum	0.24	5.68	-4.092	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	0.14	5.49	-4.515	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Mixed_Cell	0.2	4.15	-3.83	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Spleen	1.81	2.02	-0.155	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Stomach	0.03	2.33	-4.25	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Stomach_Mixed_Cell	0.01	2.37	-4.456	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Stomach_Mucosa	0	0.3	-2.014	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Stomach_Muscularis	0.13	7.56	-5.047	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Testis	0.32	4.61	-3.488	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Thyroid	0.02	8.16	-6.148	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Uterus	0.04	12.82	-6.491	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Vagina	0.03	12.71	-6.675	Not hotspot	NA
+RALYL::ENSG00000255201_i_i_30EFE4	Whole_Blood	0	0.52	-2.641	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Adipose_Subcutaneous	0.02	91.12	-9.615	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Adipose_Visceral_Omentum	0	84.18	-9.719	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Adrenal_Gland	10.24	8.11	0.332	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Artery_Aorta	0.01	131.33	-10.164	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Artery_Coronary	0.02	105.58	-9.764	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Artery_Tibial	0.02	119.98	-9.937	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Bladder	0	80.97	-9.663	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Amygdala	10.98	12.6	-0.197	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Anterior_cingulate_cortex_BA24	22.37	14.27	0.645	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Caudate_basal_ganglia	13.27	11.56	0.197	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Cerebellar_Hemisphere	61.56	106.8	-0.794	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Cerebellum	39.43	108.9	-1.463	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Cortex	16.7	14.79	0.175	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Frontal_Cortex_BA9	30.29	14.31	1.077	Hotspot	Large expression difference (log2 ratio > 1)
+RALYL::FGFR1_i_i_30EFE4	Brain_Hippocampus	9.64	11.92	-0.304	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Hypothalamus	24.48	18.8	0.379	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Nucleus_accumbens_basal_ganglia	20.36	11.61	0.804	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Putamen_basal_ganglia	9.14	9.27	-0.02	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Spinal_cord_cervical_c-1	3.05	23.84	-2.925	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Brain_Substantia_nigra	9.22	14.07	-0.605	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Breast_Mammary_Tissue	0.02	85.5	-9.488	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Cells_Cultured_fibroblasts	0	80.47	-9.654	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Cells_EBV-transformed_lymphocytes	0	4.86	-5.632	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Cervix_Ectocervix	0	83.92	-9.715	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Cervix_Endocervix	0.01	89.25	-9.669	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Colon_Sigmoid	0.45	98.59	-7.487	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Colon_Transverse	0.17	43.09	-7.306	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Colon_Transverse_Mixed_Cell	0.07	18.75	-6.825	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Colon_Transverse_Mucosa	0	4.04	-5.371	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Colon_Transverse_Muscularis	0.32	83.8	-7.641	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Esophagus_Gastroesophageal_Junction	0.07	97.49	-9.136	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Esophagus_Mucosa	0	15.34	-7.271	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Esophagus_Muscularis	0.04	95.22	-9.392	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Fallopian_Tube	0.78	131.15	-7.214	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Heart_Atrial_Appendage	1.1	43.76	-5.188	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Heart_Left_Ventricle	0.37	24.34	-5.715	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Kidney_Cortex	1.77	16.17	-3.122	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Kidney_Medulla	2.58	28.76	-3.427	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Liver	0.05	2.44	-4.069	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Liver_Hepatocyte	0.02	0.97	-3.209	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Liver_Mixed_Cell	0.05	1.51	-3.401	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Liver_Portal_Tract	4.11	26.81	-2.677	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Lung	0	54.82	-9.101	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Minor_Salivary_Gland	0.42	25.9	-5.649	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Muscle_Skeletal	0.02	9.68	-6.303	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Nerve_Tibial	0.25	101.45	-8.172	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Ovary	0.03	127.79	-9.989	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Pancreas	0.3	37.64	-6.565	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Pancreas_Acini	0.29	35.09	-6.506	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Pancreas_Islets	8.93	45.02	-2.321	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Pancreas_Mixed_Cell	0.38	32.37	-6.066	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Pituitary	6.44	62.94	-3.269	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Prostate	0.07	60.61	-8.499	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Skin_Not_Sun_Exposed_Suprapubic	0	25.46	-7.998	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Skin_Sun_Exposed_Lower_leg	0.02	30.26	-7.997	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Small_Intestine_Terminal_Ileum	0.24	28.55	-6.403	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	0.14	23.93	-6.619	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Small_Intestine_Terminal_Ileum_Mixed_Cell	0.2	19.95	-6.068	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Spleen	1.81	9.76	-2.371	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Stomach	0.03	13.77	-6.763	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Stomach_Mixed_Cell	0.01	19.15	-7.417	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Stomach_Mucosa	0	2.91	-4.911	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Stomach_Muscularis	0.13	71.2	-8.265	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Testis	0.32	27.47	-6.036	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Thyroid	0.02	41.36	-8.476	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Uterus	0.04	101.65	-9.468	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Vagina	0.03	66.74	-9.059	Not hotspot	NA
+RALYL::FGFR1_i_i_30EFE4	Whole_Blood	0	2.07	-4.439	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Adipose_Subcutaneous	0.07	0.01	0.624	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Adipose_Visceral_Omentum	0.17	0.01	1.32	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Adrenal_Gland	0.26	0.01	1.722	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Artery_Aorta	0.2	0.01	1.396	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Artery_Coronary	0.28	0.01	1.795	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Artery_Tibial	0.11	0.01	0.946	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Bladder	0.08	0.02	0.654	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Amygdala	4.2	0.03	5.072	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Anterior_cingulate_cortex_BA24	8.76	0.07	5.725	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Caudate_basal_ganglia	6.41	0.03	5.636	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Cerebellar_Hemisphere	70.51	0.06	8.748	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Cerebellum	64.24	0.16	7.939	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Cortex	11.2	0.11	5.751	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Frontal_Cortex_BA9	18.02	0.12	6.365	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Hippocampus	5.04	0.03	5.314	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Hypothalamus	6.44	0.05	5.489	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Nucleus_accumbens_basal_ganglia	9.77	0.02	6.333	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Putamen_basal_ganglia	4.96	0.03	5.323	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Spinal_cord_cervical_c-1	1.43	0.02	3.64	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Brain_Substantia_nigra	1.79	0.04	3.806	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Breast_Mammary_Tissue	0.18	0.01	1.288	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Cells_Cultured_fibroblasts	0.13	0.02	0.895	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Cells_EBV-transformed_lymphocytes	0.01	0	0.123	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Cervix_Ectocervix	0.5	0.01	2.468	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Cervix_Endocervix	0.46	0.01	2.33	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Colon_Sigmoid	0.19	0.02	1.214	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Colon_Transverse	0.09	0.02	0.701	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Colon_Transverse_Mixed_Cell	0.05	0.01	0.426	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Colon_Transverse_Mucosa	0.01	0.01	-0.011	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Colon_Transverse_Muscularis	0.18	0.01	1.313	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Esophagus_Gastroesophageal_Junction	0.11	0.02	0.892	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Esophagus_Mucosa	0.02	0.02	0.018	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Esophagus_Muscularis	0.07	0.02	0.582	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Fallopian_Tube	0.22	0.02	1.437	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Heart_Atrial_Appendage	0.04	0.01	0.379	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Heart_Left_Ventricle	0.01	0	0.118	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Kidney_Cortex	1.92	0.02	4.082	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Kidney_Medulla	1.79	0.01	4.145	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Liver	0.03	0.02	0.092	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Liver_Hepatocyte	0.01	0.02	-0.106	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Liver_Mixed_Cell	0.02	0.02	-0.109	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Liver_Portal_Tract	0.11	0.03	0.665	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Lung	0.09	0.06	0.256	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Minor_Salivary_Gland	0.09	0.02	0.689	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Muscle_Skeletal	0.01	0.01	0.047	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Nerve_Tibial	0.67	0.07	2.16	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Ovary	0.23	0.01	1.586	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Pancreas	0.05	0.01	0.427	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Pancreas_Acini	0.05	0.01	0.478	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Pancreas_Islets	1.16	0	3.652	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Pancreas_Mixed_Cell	0.05	0.01	0.521	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Pituitary	4.28	0.02	5.171	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A-AS1_i_i_4984E3	Prostate	0.1	0.03	0.631	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Skin_Not_Sun_Exposed_Suprapubic	0.06	0.01	0.544	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Skin_Sun_Exposed_Lower_leg	0.06	0.01	0.555	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Small_Intestine_Terminal_Ileum	0.09	0.01	0.791	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	0.17	0	1.445	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Small_Intestine_Terminal_Ileum_Mixed_Cell	0.07	0.01	0.645	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Spleen	0.1	0.01	0.811	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Stomach	0.21	0.01	1.538	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Stomach_Mixed_Cell	0.23	0.01	1.654	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Stomach_Mucosa	0.25	0	1.8	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Stomach_Muscularis	0.06	0	0.63	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Testis	0.36	0.45	-0.269	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Thyroid	0.05	0.02	0.258	Not hotspot	NA
+SCN2A::SCN1A-AS1_i_i_4984E3	Uterus	0.49	0.01	2.479	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Vagina	0.33	0.02	1.833	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A-AS1_i_i_4984E3	Whole_Blood	0.01	0	0.121	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Adipose_Subcutaneous	0.07	0.01	0.677	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Adipose_Visceral_Omentum	0.17	0	1.341	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Adrenal_Gland	0.26	0.01	1.718	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Artery_Aorta	0.2	0.01	1.444	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Artery_Coronary	0.28	0	1.871	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Artery_Tibial	0.11	0.01	0.975	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Bladder	0.08	0	0.827	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Amygdala	4.2	2.23	0.885	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Anterior_cingulate_cortex_BA24	8.76	4.28	1.016	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Brain_Caudate_basal_ganglia	6.41	3.29	0.943	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Cerebellar_Hemisphere	70.51	7.41	3.232	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Brain_Cerebellum	64.24	6.57	3.27	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Brain_Cortex	11.2	6.39	0.8	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Frontal_Cortex_BA9	18.02	10.93	0.715	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Hippocampus	5.04	2.62	0.916	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Hypothalamus	6.44	4.4	0.538	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Nucleus_accumbens_basal_ganglia	9.77	3.49	1.459	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Brain_Putamen_basal_ganglia	4.96	2.55	0.936	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Spinal_cord_cervical_c-1	1.43	1.13	0.309	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Brain_Substantia_nigra	1.79	1.87	-0.06	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Breast_Mammary_Tissue	0.18	0	1.418	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Cells_Cultured_fibroblasts	0.13	0.16	-0.193	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Cells_EBV-transformed_lymphocytes	0.01	0	0.07	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Cervix_Ectocervix	0.5	0.01	2.47	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Cervix_Endocervix	0.46	0.01	2.354	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Colon_Sigmoid	0.19	0.04	1.064	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Colon_Transverse	0.09	0.02	0.704	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Colon_Transverse_Mixed_Cell	0.05	0.01	0.45	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Colon_Transverse_Mucosa	0.01	0	0.12	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Colon_Transverse_Muscularis	0.18	0.04	0.967	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Esophagus_Gastroesophageal_Junction	0.11	0.01	0.989	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Esophagus_Mucosa	0.02	0	0.237	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Esophagus_Muscularis	0.07	0.01	0.68	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Fallopian_Tube	0.22	0.07	0.866	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Heart_Atrial_Appendage	0.04	0.01	0.334	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Heart_Left_Ventricle	0.01	0.02	-0.108	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Kidney_Cortex	1.92	0.01	4.257	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A_i_e_4984E3	Kidney_Medulla	1.79	0.02	3.982	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A_i_e_4984E3	Liver	0.03	0	0.265	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Liver_Hepatocyte	0.01	0	0.11	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Liver_Mixed_Cell	0.02	0	0.15	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Liver_Portal_Tract	0.11	0.01	0.951	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Lung	0.09	1.06	-2.612	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Minor_Salivary_Gland	0.09	0	0.887	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Muscle_Skeletal	0.01	0	0.08	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Nerve_Tibial	0.67	0.01	2.806	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Ovary	0.23	0.01	1.637	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Pancreas	0.05	0.01	0.513	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Pancreas_Acini	0.05	0.01	0.457	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Pancreas_Islets	1.16	0	3.597	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A_i_e_4984E3	Pancreas_Mixed_Cell	0.05	0.01	0.521	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Pituitary	4.28	0.06	4.815	Hotspot	Upstream expressed; downstream silent; large ratio
+SCN2A::SCN1A_i_e_4984E3	Prostate	0.1	0.01	0.94	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Skin_Not_Sun_Exposed_Suprapubic	0.06	0	0.63	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Skin_Sun_Exposed_Lower_leg	0.06	0.01	0.626	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Small_Intestine_Terminal_Ileum	0.09	0.01	0.779	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Small_Intestine_Terminal_Ileum_Lymphoid_Aggregate	0.17	0	1.445	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Small_Intestine_Terminal_Ileum_Mixed_Cell	0.07	0.01	0.647	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Spleen	0.1	0.01	0.877	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Stomach	0.21	0	1.544	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Stomach_Mixed_Cell	0.23	0	1.73	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Stomach_Mucosa	0.25	0	1.822	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Stomach_Muscularis	0.06	0.01	0.603	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Testis	0.36	0.14	0.96	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Thyroid	0.05	0.01	0.48	Not hotspot	NA
+SCN2A::SCN1A_i_e_4984E3	Uterus	0.49	0	2.508	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Vagina	0.33	0.01	2.025	Hotspot	Large expression difference (log2 ratio > 1)
+SCN2A::SCN1A_i_e_4984E3	Whole_Blood	0.01	0	0.121	Not hotspot	NA

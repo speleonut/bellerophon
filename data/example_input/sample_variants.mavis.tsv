@@ -1,0 +1,7 @@
+break1_chromosome	break1_position_start	break1_position_end	break2_chromosome	break2_position_start	break2_position_end	break1_orientation	break2_orientation	event_type	annotation
+8	38425101	38425101	8	84860033	84860033	-	+	inversion	canonical_fusion_in-frame
+14	95239053	95239053	14	95570195	95570195	+	+	duplication	non-canonical_in-frame
+2	165359599	165359599	2	166077750	166077750	+	+	duplication	unknown
+X	134378155	134388155	X	134482377	134483377	+	+	deletion	canonical_fusion_in-frame
+X	53320397	53320397	X	53544782	53544782	+	+	duplication	canonical_fusion_in-frame
+

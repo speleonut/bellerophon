@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Fusion Gene Detection Report - 2026-04-18</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+    h2 { color: #34495e; margin-top: 30px; }
+    .metadata { background-color: #ecf0f1; padding: 15px; border-radius: 4px; margin: 20px 0; }
+    .stat-box { display: inline-block; margin: 10px 20px 10px 0; }
+    .stat-box strong { color: #3498db; font-size: 18px; }
+    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+    th { background-color: #3498db; color: white; padding: 12px; text-align: left; }
+    td { padding: 10px; border-bottom: 1px solid #ddd; }
+    tr:hover { background-color: #f9f9f9; }
+    .hotspot { background-color: #fff9e6; }
+    .disease-gene { color: #b80058; font-weight: bold; }
+    .canonical { color: #00bbad; font-weight: bold; }
+    .non-canonical { color: #ebac23; font-weight: bold; }
+    .footer { margin-top: 30px; text-align: center; color: #7f8c8d; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <h1>Fusion Gene Detection Report - 2026-04-18</h1>
+    <p>Generated: 2026-04-18 12:02:41</p>
+    <div class='metadata'>
+      <h2>Report Summary</h2>
+      <div class='stat-box'><strong>8</strong> Total Fusions</div>
+      <div class='stat-box'><strong>4</strong> Canonical</div>
+      <div class='stat-box'><strong>4</strong> Non-Canonical</div>
+      <div class='stat-box'><strong>2</strong> In-Frame</div>
+      <div class='stat-box'><strong>0</strong> Disease Genes</div>
+      <div class='stat-box'><strong>178</strong> Hotspots</div>
+    </div>
+    <h2>Fusion Summary</h2>
+    <table>
+      <tr><th>Fusion ID</th><th>Gene 1</th><th>Gene 2</th><th>Type</th><th>Reading Frame</th><th>Disease Genes</th><th>Hotspot Tissues</th></tr>
+      <tr class='hotspot'><td>FGFR1::RALYL_i_i_30EFE4</td><td></td><td></td><td class='canonical'>Canonical</td><td>Out-of-frame</td><td class=''>None</td><td>56</td></tr>
+      <tr class='hotspot'><td>RALYL::FGFR1_i_i_30EFE4</td><td></td><td></td><td class='canonical'>Canonical</td><td>In-frame</td><td class=''>None</td><td>1</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td></td><td></td><td class='non-canonical'>Non-canonical</td><td>Unknown</td><td class=''>None</td><td>49</td></tr>
+      <tr class='hotspot'><td>RALYL::ENSG00000255201_i_i_30EFE4</td><td></td><td></td><td class='non-canonical'>Non-canonical</td><td>Unknown</td><td class=''>None</td><td>13</td></tr>
+      <tr class=''><td>CLMN::_i_0_40D498</td><td></td><td></td><td class='non-canonical'>Non-canonical</td><td>Unknown</td><td class=''>None</td><td>0</td></tr>
+      <tr class='hotspot'><td>SCN2A::SCN1A_i_e_4984E3</td><td></td><td></td><td class='non-canonical'>Non-canonical</td><td>Unknown</td><td class=''>None</td><td>24</td></tr>
+      <tr class='hotspot'><td>SCN2A::SCN1A-AS1_i_i_4984E3</td><td></td><td></td><td class='canonical'>Canonical</td><td>Unknown</td><td class=''>None</td><td>35</td></tr>
+      <tr class=''><td>PHF6::HPRT1_i_i_912279</td><td></td><td></td><td class='canonical'>Canonical</td><td>In-frame</td><td class=''>None</td><td>0</td></tr>
+    </table>
+    <h2>Expression Hotspots (Preview)</h2>
+    <table>
+      <tr><th>Fusion ID</th><th>Tissue</th><th>Gene1 TPM</th><th>Gene2 TPM</th><th>Log2 Ratio</th><th>Status</th></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Adipose_Subcutaneous</td><td>12.07</td><td>0.02</td><td>6.708</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Adipose_Visceral_Omentum</td><td>12.23</td><td>0</td><td>6.946</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Artery_Aorta</td><td>12.45</td><td>0.01</td><td>6.775</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Artery_Coronary</td><td>12.39</td><td>0.02</td><td>6.683</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Artery_Tibial</td><td>9.31</td><td>0.02</td><td>6.262</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Bladder</td><td>8.74</td><td>0</td><td>6.466</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Breast_Mammary_Tissue</td><td>16.53</td><td>0.02</td><td>7.124</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Cells_Cultured_fibroblasts</td><td>8.31</td><td>0</td><td>6.394</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Cells_EBV-transformed_lymphocytes</td><td>0.76</td><td>0</td><td>3.098</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Cervix_Ectocervix</td><td>11.96</td><td>0</td><td>6.913</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Cervix_Endocervix</td><td>10.54</td><td>0.01</td><td>6.599</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Colon_Sigmoid</td><td>12.03</td><td>0.45</td><td>4.462</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Colon_Transverse</td><td>5.78</td><td>0.17</td><td>4.429</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Colon_Transverse_Mixed_Cell</td><td>1.95</td><td>0.07</td><td>3.625</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Colon_Transverse_Mucosa</td><td>0.69</td><td>0</td><td>2.979</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Colon_Transverse_Muscularis</td><td>9.12</td><td>0.32</td><td>4.455</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Esophagus_Gastroesophageal_Junction</td><td>10.38</td><td>0.07</td><td>5.917</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Esophagus_Mucosa</td><td>3.32</td><td>0</td><td>5.095</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Esophagus_Muscularis</td><td>9.82</td><td>0.04</td><td>6.127</td><td>Hotspot</td></tr>
+      <tr class='hotspot'><td>ENSG00000255201::RALYL_i_i_30EFE4</td><td>Fallopian_Tube</td><td>16.47</td><td>0.78</td><td>4.228</td><td>Hotspot</td></tr>
+      <tr><td colspan='6' style='text-align:center;'>... and 158 more hotspots (see full report tables)</td></tr>
+    </table>
+    <div class='footer'>
+      <p>Bellerophon Fusion Gene Detection Pipeline</p>
+      <p>Phase 6: Report Generation</p>
+    </div>
+  </div>
+</body>
+</html>

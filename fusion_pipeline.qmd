@@ -1,0 +1,557 @@
+---
+title: "Fusion Gene Detection Pipeline"
+subtitle: "Structural Variant Analysis and Gene Fusion Prediction"
+date: "`r Sys.Date()`"
+author: "Bellerophon Pipeline"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    self-contained: true
+    code-fold: true
+    code-summary: "Show code"
+  pdf:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+params:
+  input_file: "data/example_input/sample_variants.mavis.tsv"
+  input_format: "auto"  # "auto", "vcf", "mavis", "hgvs"
+  output_dir: "output"
+  genome_build: "GRCh38"
+  gencode_release: "49"
+  disease_gene_list: "data/annotations/Nijmegen.DG.ENSG.list.txt"
+  gtex_file: "data/annotations/GTEx_Analysis_2025-08-22_v11_RNASeQCv2.4.3_gene_median_tpm.gct.gz"
+  ncbi_contig_mapping: "data/ncbi_contig_mapping.tsv"
+editor_options: 
+  chunk_output_type: inline
+editor: 
+  markdown: 
+    wrap: 512
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE)
+
+# Load required packages
+library(tidyverse)
+library(VariantAnnotation)
+library(GenomicRanges)
+library(GenomicFeatures)
+library(txdbmaker)
+library(biomaRt)
+library(AnnotationHub)
+library(org.Hs.eg.db)
+library(rtracklayer)
+library(Biostrings)
+library(BSgenome)
+library(stringr)
+library(stringi)
+library(gtexr)
+library(rlang)
+library(glue)
+library(readr)
+
+# Create output directory
+if (!dir.exists(params$output_dir)) {
+  dir.create(params$output_dir, recursive = TRUE)
+}
+
+# Source helper functions
+source("R/parse_hgvs.R")
+source("R/parse_inputs.R")
+source("R/utils.R")
+source("R/annotations.R")
+source("R/breakpoint_annotation.R")
+source("R/fusion_prediction.R")
+source("R/expression_analysis.R")
+source("R/report_generation.R")
+source("R/validation.R")
+
+# Initialize logging
+log_messages <- list()
+
+log_message <- function(message, level = "INFO") {
+  timestamp <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
+  log_entry <- glue::glue("[{timestamp}] [{level}] {message}")
+  cat(log_entry, "\n")
+  log_messages <<- c(log_messages, list(log_entry))
+}
+
+log_message("Fusion Gene Detection Pipeline initialized")
+log_message(glue::glue("Input: {params$input_file}"))
+log_message(glue::glue("Genome build: {params$genome_build}"))
+```
+
+# 1. Project Overview
+
+This Quarto pipeline analyzes structural variants (SVs) from DNA sequencing data to: 1. Parse variants in multiple formats (HGVS, MAVIS, VCF) 2. Identify breakpoints that disrupt genes and transcripts 3. Predict canonical and non-canonical gene fusions 4.
+Classify reading frames (in-frame vs out-of-frame) 5. Integrate GTEx expression data to quantify fusion expression patterns 6. Generate comprehensive summary reports and visualizations
+
+**Key Features:** - Supports GRCh38/hg38 genome build - Handles uncertain breakpoint positions - Flags disease genes at breakpoints - Produces publication-ready summary tables and heatmaps
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 2. Data Import and Type Detection
+
+```{r import-input}
+log_message("Starting data import phase")
+
+# Detect input type and load data
+input_data <- detect_and_parse_input(
+  input_file = params$input_file,
+  input_format = params$input_format,
+  ncbi_contig_mapping_file = params$ncbi_contig_mapping
+)
+
+log_message(glue::glue("Input type detected: {input_data$format}"))
+log_message(glue::glue("Input records: {nrow(input_data$variants)}"))
+
+# Display first few records
+print("First few input records:")
+print(head(input_data$variants, 3))
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Chromosome Normalization and Validation
+
+```{r normalize-chromosomes}
+log_message("Normalizing chromosome formats and validating coordinates")
+
+# Normalize chromosomes to UCSC style (chr1, chr2, chr3, ..., chrX, chrY, chrM)
+normalized_variants <- input_data$variants %>%
+  mutate(
+    break1_chromosome = normalize_chromosome(break1_chromosome, style = "UCSC"),
+    break2_chromosome = normalize_chromosome(break2_chromosome, style = "UCSC")
+  )
+
+# Validate chromosomes are valid human chromosomes
+valid_chrs <- c(as.character(1:22), "X", "Y", "M") %>%
+  gsub("^","chr",.)
+invalid_chrs <- unique(c(
+  normalized_variants$break1_chromosome[!(normalized_variants$break1_chromosome %in% valid_chrs)],
+  normalized_variants$break2_chromosome[!(normalized_variants$break2_chromosome %in% valid_chrs)]
+))
+
+if (length(invalid_chrs) > 0) {
+  log_message(
+    glue::glue("WARNING: Found invalid chromosomes: {paste(invalid_chrs, collapse=', ')}. These variants will be flagged as invalid."),
+    level = "WARNING"
+  )
+}
+
+# Mark invalid variants
+normalized_variants <- normalized_variants %>%
+  mutate(
+    is_valid_chromosome = (break1_chromosome %in% valid_chrs) & (break2_chromosome %in% valid_chrs)
+  )
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 4. Assign Unique Variant IDs and Classify Variant Types
+
+```{r assign-ids-and-classify}
+log_message("Assigning unique variant IDs and classifying variant types")
+
+# Assign unique 6-digit hex IDs
+set.seed(42)  # For reproducibility
+variant_ids <- sprintf("%06X", sample(0:16777215, nrow(normalized_variants), replace = FALSE))
+
+variants_processed <- normalized_variants %>%
+  mutate(variant_id = variant_ids) %>%
+  dplyr::rowwise() %>%
+  mutate(
+    # Classify variant type based on event_type and breakpoint logic
+    variant_type = classify_variant_type(
+      event_type = event_type,
+      break1_chromosome = break1_chromosome,
+      break2_chromosome = break2_chromosome,
+      break1_orientation = break1_orientation,
+      break2_orientation = break2_orientation
+    )
+  ) %>%
+  dplyr::ungroup() %>%
+  relocate(variant_id, variant_type, .before = everything())
+
+log_message(glue::glue("Assigned {nrow(variants_processed)} unique variant IDs"))
+print("Variant type distribution:")
+print(table(variants_processed$variant_type))
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 5. Handle Uncertain Breakpoint Positions
+
+```{r handle-uncertain-breakpoints}
+log_message("Processing uncertain breakpoint positions")
+
+variants_processed <- variants_processed %>%
+  dplyr::rowwise() %>%
+  mutate(
+    # For uncertain breakpoints, use outermost position relative to orientation
+    break1_position = handle_uncertain_breakpoint(
+      position_start = break1_position_start,
+      position_end = break1_position_end,
+      orientation = break1_orientation
+    ),
+    break2_position = handle_uncertain_breakpoint(
+      position_start = break2_position_start,
+      position_end = break2_position_end,
+      orientation = break2_orientation
+    ),
+    # Flag if breakpoint is uncertain
+    break1_uncertain = (break1_position_start != break1_position_end),
+    break2_uncertain = (break2_position_start != break2_position_end)
+  ) %>%
+  dplyr::ungroup()
+
+uncertain_count <- sum(variants_processed$break1_uncertain | variants_processed$break2_uncertain)
+if (uncertain_count > 0) {
+  log_message(
+    glue::glue("Found {uncertain_count} variants with uncertain breakpoint positions. Using outermost coordinates."),
+    level = "WARNING"
+  )
+}
+variants_processed
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 6. Load Reference Annotations (GENCODE, Disease Genes, GTEx Metadata)
+
+```{r load-annotations}
+log_message("Starting Phase 2: Loading reference annotations")
+
+# Load GENCODE annotations
+log_message("Loading GENCODE annotations from AnnotationHub")
+gencode_data <- load_gencode_annotations(force_download = FALSE, gencode_release = params$gencode_release)
+
+if (gencode_data$loaded_successfully) {
+  log_message(glue::glue("✓ Loaded GENCODE v{gencode_data$gencode_version}"))
+  log_message(glue::glue("  Genes: {nrow(gencode_data$genes)}"))
+  log_message(glue::glue("  Transcripts: {nrow(gencode_data$transcripts)}"))
+  log_message(glue::glue("  Exons: {length(gencode_data$exons)}"))
+  log_message(glue::glue("  CDS regions: {length(gencode_data$cds)}"))
+} else {
+  log_message("✗ Failed to load GENCODE annotations", level = "WARNING")
+  log_message(glue::glue("  Error: {gencode_data$error}"), level = "WARNING")
+}
+
+# Load disease gene list
+log_message("Loading disease gene list")
+disease_genes <- load_disease_genes(params$disease_gene_list)
+
+if (nrow(disease_genes) > 0) {
+  log_message(glue::glue("✓ Loaded {nrow(disease_genes)} disease genes"))
+} else {
+  log_message("⚠ No disease genes loaded (file may be missing or empty)", level = "WARNING")
+}
+
+# Initialize GTEx metadata
+log_message("Initializing GTEx tissue metadata")
+gtex_tissues <- gencode_data$gtex_tissues  # Use tissues from annotation load
+
+log_message("✓ Phase 2 complete: All annotations loaded")
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 7. Phase 3: Breakpoint Annotation
+
+```{r phase3-breakpoint-annotation}
+log_message("Starting Phase 3: Breakpoint Annotation")
+
+breakpoint_annotations <- annotate_breakpoints(
+  variants = variants_processed,
+  annotations = gencode_data,
+  disease_genes = disease_genes
+)
+
+log_message(glue::glue("✓ Annotated {nrow(breakpoint_annotations)} breakpoint-gene pairs"))
+log_message(glue::glue("  Genic breakpoints: {sum(breakpoint_annotations$is_gene, na.rm=TRUE)}"))
+log_message(glue::glue("  Disease genes flagged: {sum(breakpoint_annotations$is_disease_gene, na.rm=TRUE)}"))
+
+# Summary of breakpoints with exon/intron/cds overlaps
+region_summary <- breakpoint_annotations %>%
+  dplyr::summarise(
+    breakpoints_with_exons = sum(is_exon),
+    breakpoints_with_introns = sum(is_intron),
+    breakpoints_with_cds = sum(is_cds),
+    intergenic_breakpoints = sum(!is_gene)
+  )
+
+cat("Breakpoint annotation summary:\n")
+print(region_summary)
+breakpoint_annotations
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 8. Phase 4: Fusion Prediction
+
+```{r phase4-fusion-prediction}
+log_message("Starting Phase 4: Fusion Prediction")
+
+fusions <- predict_fusions(
+  breakpoint_annotations = breakpoint_annotations,
+  annotations = gencode_data,
+  disease_genes = disease_genes
+)
+
+log_message(glue::glue("✓ Predicted {nrow(fusions)} fusions"))
+log_message(glue::glue("  Canonical: {sum(fusions$is_canonical == TRUE, na.rm=TRUE)}"))
+log_message(glue::glue("  Non-canonical: {sum(fusions$is_canonical == FALSE, na.rm=TRUE)}"))
+log_message(glue::glue("  In-frame: {sum(fusions$in_frame == TRUE, na.rm=TRUE)}"))
+log_message(glue::glue("  Out-of-frame: {sum(fusions$in_frame == FALSE, na.rm=TRUE)}"))
+
+# Display fusion predictions
+cat("\nFusion Predictions:\n")
+print(fusions %>%
+  dplyr::select(fusion_id, variant_type, bp1_gene_symbol, bp2_gene_symbol, 
+                is_canonical, in_frame, canonical_fusion_gene_promoter_breakpoint))
+fusions
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 9. Phase 5: Expression Analysis
+
+```{r phase5-expression-analysis}
+log_message("Starting Phase 5: Expression Analysis")
+
+# Load GTEx expression data
+gtex_expression <- load_gtex_expression()
+
+if (!gtex_expression$loaded_successfully) {
+  log_message("⚠ GTEx data not available - skipping expression analysis", level = "WARNING")
+  log_message("  To use: Download from https://www.gtexportal.org/", level = "WARNING")
+  expression_hotspots <- tibble::tibble()
+} else {
+  log_message(glue::glue("✓ Loaded GTEx v11 expression data"))
+  log_message(glue::glue("  {nrow(gtex_expression$expression)} genes × {length(gtex_expression$tissues)} tissues"))
+  
+  # Identify fusion hotspots
+  expression_hotspots <- identify_fusion_hotspots(
+    fusion_data = fusions,
+    gtex_expression = gtex_expression
+  )
+  
+  n_hotspots <- sum(expression_hotspots$is_hotspot, na.rm = TRUE)
+  log_message(glue::glue("✓ Identified {n_hotspots} tissue-level fusion hotspots"))
+  
+  # Show hotspot summary
+  if (n_hotspots > 0) {
+    hotspot_summary <- expression_hotspots %>%
+      dplyr::filter(is_hotspot) %>%
+      dplyr::group_by(fusion_id) %>%
+      dplyr::summarise(
+        n_hotspot_tissues = dplyr::n(),
+        .groups = "drop"
+      )
+    
+    cat("\nHotspots per fusion:\n")
+    print(hotspot_summary)
+  }
+}
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 10. Phase 6: Report Generation
+
+```{r phase6-report-generation}
+log_message("Starting Phase 6: Report Generation")
+
+# Generate comprehensive report
+report <- generate_fusion_report(
+  fusions = fusions,
+  expression_hotspots = expression_hotspots,
+  breakpoint_annotations = breakpoint_annotations,
+  disease_genes = disease_genes
+)
+
+log_message("✓ Generated comprehensive fusion report")
+log_message(glue::glue("  Fusion summary: {nrow(report$fusion_summary)} entries"))
+log_message(glue::glue("  Breakpoint summary: {nrow(report$breakpoint_summary)} entries"))
+log_message(glue::glue("  Hotspot summary: {nrow(report$hotspot_summary)} entries"))
+
+# Export tables to TSV
+log_message("Exporting report tables to TSV")
+export_report_tables(report, output_dir = params$output_dir)
+
+# Generate HTML report
+log_message("Generating HTML report")
+html_report_file <- file.path(params$output_dir, "fusion_report.html")
+generate_html_report(
+  report = report,
+  output_file = html_report_file,
+  title = glue::glue("Fusion Gene Detection Report - {Sys.Date()}")
+)
+
+log_message(glue::glue("✓ HTML report written to {html_report_file}"))
+
+# Print report summary
+print_report_summary(report)
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 11. Phase 7: Quality Control & Validation
+
+```{r phase7-validation}
+log_message("Starting Phase 7: Quality Control & Validation")
+
+if (nrow(fusions) > 0) {
+  # Run complete pipeline validation
+  validation_result <- validate_complete_pipeline(
+    annotations = gencode_data,
+    breakpoint_annotations = breakpoint_annotations,
+    fusions = fusions,
+    expression_hotspots = expression_hotspots,
+    report = report
+  )
+  
+  log_message(glue::glue("Validation: {validation_result$total_passed}/{validation_result$total_checks} checks passed"))
+  
+  if (validation_result$overall_passed) {
+    log_message("✓ ALL VALIDATION CHECKS PASSED - Pipeline ready for production use")
+  } else {
+    log_message("⚠ Some validation checks failed - review details above", level = "WARNING")
+  }
+  
+  # Calculate quality metrics
+  quality_metrics <- calculate_quality_metrics(fusions, expression_hotspots, report)
+  
+  cat("\nData Quality Metrics:\n")
+  print(quality_metrics)
+} else {
+  log_message("⚠ No fusions to validate - skipping Phase 7", level = "WARNING")
+}
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 12. Final Diagnostic Summary
+
+```{r final-diagnostic-summary}
+log_message("Generating final pipeline summary")
+
+# Input summary
+input_summary <- tibble::tibble(
+  Category = "Input Data",
+  Metric = c("Total variants", "Valid chromosomes", "Variant types"),
+  Value = c(
+    nrow(variants_processed),
+    sum(variants_processed$is_valid_chromosome),
+    n_distinct(variants_processed$variant_type)
+  )
+)
+
+# Annotation summary
+annotation_summary <- tibble::tibble(
+  Category = "Annotations",
+  Metric = c("Genes", "Transcripts", "Exons", "CDS regions"),
+  Value = c(
+    length(gencode_data$genes_gr),
+    nrow(gencode_data$tx_lookup),
+    length(gencode_data$exons_gr),
+    length(gencode_data$cds_gr)
+  )
+)
+
+# Analysis summary
+analysis_summary <- tibble::tibble(
+  Category = "Analysis Results",
+  Metric = c("Breakpoints annotated", "Fusions predicted", "Canonical fusions", 
+             "In-frame fusions", "Expression hotspots"),
+  Value = c(
+    nrow(breakpoint_annotations),
+    nrow(fusions),
+    sum(fusions$canonical == TRUE, na.rm = TRUE),
+    sum(fusions$reading_frame == "in-frame", na.rm = TRUE),
+    if (nrow(expression_hotspots) > 0) sum(expression_hotspots$is_hotspot, na.rm = TRUE) else 0
+  )
+)
+
+# Combine and display
+all_summary <- dplyr::bind_rows(input_summary, annotation_summary, analysis_summary)
+
+cat("\n========================================\n")
+cat("PIPELINE EXECUTION SUMMARY\n")
+cat("========================================\n\n")
+print(all_summary)
+
+cat("\nVariant Type Distribution:\n")
+print(variants_processed %>%
+  dplyr::group_by(variant_type) %>%
+  dplyr::summarise(count = dplyr::n(), .groups = "drop"))
+
+log_message("✓ Pipeline execution complete")
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 13. Save Final Results
+
+```{r save-final-results}
+log_message("Saving final results to {params$output_dir}")
+
+# Ensure output directory exists
+if (!dir.exists(params$output_dir)) {
+  dir.create(params$output_dir, recursive = TRUE)
+}
+
+# Save R objects for downstream use
+saveRDS(variants_processed, file.path(params$output_dir, "variants_processed.rds"))
+log_message(glue::glue("Saved: variants_processed.rds"))
+
+saveRDS(breakpoint_annotations, file.path(params$output_dir, "breakpoint_annotations.rds"))
+log_message(glue::glue("Saved: breakpoint_annotations.rds"))
+
+saveRDS(fusions, file.path(params$output_dir, "fusions.rds"))
+log_message(glue::glue("Saved: fusions.rds"))
+
+saveRDS(report, file.path(params$output_dir, "report.rds"))
+log_message(glue::glue("Saved: report.rds"))
+
+# Save session information
+sink(file.path(params$output_dir, "session_info.txt"))
+cat("=== Session Information ===\n\n")
+print(sessionInfo())
+sink()
+log_message(glue::glue("Saved: session_info.txt"))
+
+log_message(glue::glue("Output directory: {params$output_dir}"))
+log_message(glue::glue("Generated files:"))
+log_message("  - variants_processed.rds")
+log_message("  - breakpoint_annotations.rds")
+log_message("  - fusions.rds")
+log_message("  - report.rds")
+log_message("  - tables/ (TSV export files)")
+log_message("  - fusion_report.html (interactive HTML report)")
+log_message("  - session_info.txt")
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 14. Execution Log
+
+```{r execution-log}
+cat("\n")
+cat("========================================\n")
+cat("PIPELINE EXECUTION LOG\n")
+cat("========================================\n\n")
+
+for (i in seq_along(log_messages)) {
+  cat(log_messages[[i]], "\n")
+}
+
+sessionInfo()
+
+cat("\n")
+cat("========================================\n")
+cat("END OF PIPELINE\n")
+cat("========================================\n")
+```

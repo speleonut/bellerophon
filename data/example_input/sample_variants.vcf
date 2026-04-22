@@ -1,0 +1,18 @@
+##fileformat=VCFv4.2
+##fileDate=20260414
+##source=bellerophon_test
+##reference=GRCh38/hg38
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=BND,Description="Breakend">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="Length of structural variant">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the variant described in this record">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	sample1
+chr8	38425101	var1	C	<INV>	50	PASS	SVTYPE=INV;SVLEN=46434932;END=84860033	GT	0/1
+chr14	95239053	var2	A	<DUP>	50	PASS	SVTYPE=DUP;SVLEN=331142;END=95570195	GT	0/1
+chr2	165359599	var3	T	<DUP>	50	PASS	SVTYPE=DUP;SVLEN=718151;END=166077750	GT	0/1
+chrX	134378155	var4	T	<DEL>	50	PASS	SVTYPE=DEL;SVLEN=-105222;END=134483377	GT	1/1
+
