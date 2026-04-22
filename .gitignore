@@ -75,6 +75,7 @@ creds.js
 # R
 .RData
 .Rhistory
+*.rds
 
 # Private Files
-*.gff3.gz
+*.gz
